@@ -12,8 +12,14 @@ import PackageDescription
 
 let package = Package(
     name: "yoga",
+    platforms: [
+        .iOS(.v9),
+        .macOS(.v10_10),
+        .watchOS(.v2),
+        .tvOS(.v10),
+    ],
     products: [
-        .library(name: "yoga", targets: [ "core" ])
+        .library(name: "Yoga", targets: [ "core" ])
     ],
     targets: [
         .target(
@@ -22,7 +28,7 @@ let package = Package(
             sources: [
                 "yoga"
             ],
-            publicHeadersPath: ".",
+            publicHeadersPath: "yoga/include",
             cxxSettings: [
                 .headerSearchPath(".")
             ]
