@@ -19,7 +19,7 @@ let package = Package(
         .tvOS(.v10),
     ],
     products: [
-        .library(name: "Yoga", targets: [ "core" ])
+        .library(name: "yoga", targets: [ "core" ])
     ],
     targets: [
         .target(
@@ -28,7 +28,7 @@ let package = Package(
             sources: [
                 "yoga"
             ],
-            publicHeadersPath: "yoga/include",
+            publicHeadersPath: "yoga",
             cxxSettings: [
                 .headerSearchPath(".")
             ]
